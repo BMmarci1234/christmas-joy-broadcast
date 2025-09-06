@@ -1,0 +1,1 @@
+This folder should contain your 16 Christmas song MP4 files as shown in your image. Place them here with the exact filenames for the music player to work properly.

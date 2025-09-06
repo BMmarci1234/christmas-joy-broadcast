@@ -65,25 +65,54 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "christmas-pulse": {
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 20px hsl(var(--primary) / 0.3)",
           },
-          to: {
-            height: "0",
+          "50%": {
+            transform: "scale(1.05)",
+            boxShadow: "0 0 40px hsl(var(--primary) / 0.6)",
           },
+        },
+        "golden-shimmer": {
+          "0%": {
+            backgroundPosition: "-200% center",
+          },
+          "100%": {
+            backgroundPosition: "200% center",
+          },
+        },
+        "countdown-tick": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "christmas-pulse": "christmas-pulse 2s ease-in-out infinite",
+        "golden-shimmer": "golden-shimmer 3s ease-in-out infinite",
+        "countdown-tick": "countdown-tick 0.6s ease-in-out",
+      },
+      backgroundImage: {
+        "gradient-christmas": "var(--gradient-christmas)",
+        "gradient-golden": "var(--gradient-golden)",
+        "gradient-snow": "var(--gradient-snow)",
+      },
+      boxShadow: {
+        "christmas": "var(--shadow-christmas)",
+        "golden": "var(--shadow-golden)",
+        "glow-christmas": "var(--glow-christmas)",
+        "glow-golden": "var(--glow-golden)",
       },
     },
   },
